@@ -1,0 +1,8 @@
+{
+  "name": "todomvc-san",
+  "dependencies": {
+    "san": "git://github.com/ecomfe/san.git",
+    "director": "~1.2.0",
+    "todomvc-common": "~0.1.9"
+  }
+}

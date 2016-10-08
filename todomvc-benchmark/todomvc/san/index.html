@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" data-framework="react">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>San • TodoMVC</title>
+		<link rel="stylesheet" href="bower_components/todomvc-common/base.css">
+        <style>
+        .clear-completed {
+            float: right;
+            position: relative;
+            line-height: 20px;
+            text-decoration: none;
+            background: rgba(0, 0, 0, 0.1);
+            font-size: 11px;
+            padding: 0 10px;
+            border-radius: 3px;
+            box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+        }
+
+        #toggle-all {
+            margin: 3px 0.5ex;
+            padding: initial;
+            font: 11px BlinkMacSystemFont;
+        }
+        #toggle-all.checked:before {
+            color: #737373;
+        }
+
+        #todo-list li .toggle.checked:after {
+            color: #737373;
+        }
+        </style>
+	</head>
+	<body>
+		<section id="todoapp"></section>
+		<footer id="info"></footer>
+		<div id="benchmark"></div>
+
+		<script src="bower_components/director/build/director.js"></script>
+		<script src="bower_components/san/src/main.js"></script>
+        <script src="js/utils.js"></script>
+        <script src="js/input.js"></script>
+        <script src="js/todoItem.js"></script>
+        <script src="js/main.js"></script>
+	</body>
+</html>

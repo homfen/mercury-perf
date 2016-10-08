@@ -1,0 +1,14 @@
+{
+  "name": "san",
+  "homepage": "https://github.com/ecomfe/san",
+  "version": "3.0.0-rc.2",
+  "_release": "3.0.0-rc.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "3.0.0-rc.2",
+    "commit": "bcdd3e862f8fa959e3c01ee1feb1210cace5cace"
+  },
+  "_source": "git://github.com/ecomfe/san.git",
+  "_target": "*",
+  "_originalSource": "git://github.com/ecomfe/san.git"
+}
