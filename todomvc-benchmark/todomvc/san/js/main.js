@@ -161,6 +161,12 @@
                         return true;
                 }
             }, this);
+            var completedTodosValues = todos.reduce(function (ids, todo) {
+                if (todo.completed) {
+                    ids.push(todo.title);
+                }
+                return ids;
+            }, []);
 
             var activeTodoCount = todos.reduce(function (accum, todo) {
                 return todo.completed ? accum : accum + 1;
@@ -171,6 +177,7 @@
             this.data.set('shownTodos', shownTodos);
             this.data.set('activeTodoCount', activeTodoCount);
             this.data.set('completedCount', completedCount);
+            this.data.set('completedTodosValues', completedTodosValues);
         },
 
         handleSubmit: function (currentTodo) {
@@ -223,7 +230,8 @@
             +             '<li san-for="todo, index in shownTodos" class="{{todo.completed | yesOrNoToBe(\'completed \', \'\')}}'
             +             '{{editing === todo.id | yesOrNoToBe(\'editing \', \'\')}}">'
             +                 '<div class="view" id="{{todo.id}}">'
-            +                     '<i class="toggle {{todo.completed | yesOrNoToBe(\'checked\', \'\')}}" on-click="toggle(todo)"></i>'
+            +                     '<input type="checkbox" class="toggle" value="{{ todo.title }}" checked="{{ completedTodosValues }}" data-id="{{ todo.id }}" on-click="toggle(todo)">'
+            //+                     '<i class="toggle {{todo.completed | yesOrNoToBe(\'checked\', \'\')}}" on-click="toggle(todo)"></i>'
             +                     '<label on-dblclick="handleEdit(todo)">{{todo.title}}</label>'
             +                     '<button class="destroy" on-click="destroy(todo)"></button>'
             +                 '</div>'
